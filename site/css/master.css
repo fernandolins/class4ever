@@ -1,0 +1,649 @@
+﻿@charset "utf-8";
+
+fieldset,img { border:0; }
+
+body 
+{
+    width:100%;
+    margin: 0px auto;
+    background-color:  #fff;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+/****** Ubuntu FONT **********************/
+
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Ubuntu'), url('../Fontes/ubuntu.woff') format('woff');
+}
+
+/***** FIM UMBUTO FONT ***************/
+
+
+@font-face {
+    font-family: 'IE Arista';     
+    src: url('../Fontes/Arista.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IE TheMix8-ExtraBoldRegular';
+    src: url('../Fontes/themix-8-xbold-webfont.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IE TheMix9-BlackRegular';    
+    src: url('../Fontes/themix-9-black-webfont.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arista';     
+    src: url('../Fontes/Arista.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheMix8-ExtraBoldRegular';
+    src: url('../Fontes/themix-8-xbold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheMix9-BlackRegular';
+    src: url('../Fontes/themix-9-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+   
+}
+
+.cell
+{
+    padding-top:10px;
+    text-align:right;    
+}
+
+.cellTitulo
+{
+	padding-top:10px;
+}
+.cell1
+{
+	width:280px;	
+}
+
+.botao2
+{
+	padding: 5px 10px 5px 10px;
+}
+
+.botao
+{
+	min-width: 250px;
+	display: block;
+	text-align: center;
+	padding-top: 7px;
+	height: 25px;
+}
+
+.btns3 
+{
+	min-width: 250px;
+	display: block;
+	text-align:center;
+	background-color:#039ACC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color:#fff;
+	font-size: 18px;
+	border-style:none;
+	border-radius:5px;	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+    behavior:url('css/PIE.htc');
+	cursor:pointer;	
+	font-family:'TheMix9-BlackRegular', 'IE TheMix9-BlackRegular';
+	background:#ff6600;
+}
+
+.btns3:hover
+{
+    background-color:#ff9900;
+}
+
+.btns2 
+{
+	background-color:#039ACC;
+	color:#fff;
+	font-size:15px;
+	border-style:none;
+	border-radius:5px;	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+    -o-border-radius:5px;
+    behavior:url('css/PIE.htc');
+	cursor:pointer;	
+	font-family:'TheMix9-BlackRegular', 'IE TheMix9-BlackRegular';
+}
+
+.btns:hover
+{
+    background-color:#035880;
+}
+
+.btns2:hover
+{
+    background-color:#035880;
+}
+
+#content
+{
+	margin-top: 66px;
+	background-color:#FAFAFA;
+}
+
+#header
+{
+    width:100%;
+    height:74px;
+    background-image:url(../imagens/header-bg.png);
+    background-repeat:repeat-x;
+    position:fixed;
+    top:0px;
+    z-index: 2000;
+}
+
+#header h1 a
+{
+	background-image:url(../imagens/componentes.png);
+	background-repeat:no-repeat;
+	background-position:7px -30px;
+	height: 34px;
+	width: 211px;
+	padding-top:10px;
+	display: block;
+	overflow: hidden;
+	text-indent: -500px;
+	margin-top: 10px;
+	margin-left: 8px;
+}
+
+#logoMobiClub
+{
+	float:left;
+	width:219px;
+	height:52px;
+	border-style:none;
+	padding: 9px 0px 0px 0px;
+}
+
+#wrapper
+{
+   width: 985px;
+   margin: 0px auto;
+}
+
+#divHeaderCompany
+{
+	background-color:#FAFAFA;	
+}
+
+#headerCompany
+{
+	width: 960px;
+	margin: 0 auto;
+}
+
+#headerCompanyWrap
+{
+	display:inline-block;
+	width:100%;
+	padding: 7px 0px;
+}
+
+#headerCompanyWrap ul
+{
+	float:right;
+	font-size: 13px;
+}
+
+#headerCompanyWrap ul li
+{
+	text-decoration: none;
+	display: inline;
+	padding-left: 8px;
+}
+
+#headerCompanyWrap ul li span
+{
+	color:#005985;
+	font-weight:bold;
+}
+
+.linkHeaderCompany
+{
+	text-decoration: none;
+	color:#005985;
+}
+
+.linkHeaderCompany:hover
+{
+	text-decoration: underline;
+}
+
+nav
+{
+    padding-top:11px;
+    float:right;
+}
+
+a:link, a:visited 
+{
+	text-decoration: none;
+}
+a:active
+{
+	text-decoration: none;
+}
+.selected
+{
+	color:#FF6600;
+	padding:5px 10px 5px 10px;
+	border-bottom:2px solid #FF6600;
+}
+.unselected
+{
+	color:#005985;     
+	padding:5px 10px 5px 10px;
+}
+
+nav ul
+{
+	padding-top:17px;
+}
+
+nav ul li
+{ 
+	text-decoration:none;
+	display:inline;
+	font-size: 17px;
+}
+
+.sucesso
+{
+	color: #009900;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.insucesso
+{
+	color: #CE0000;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+ul
+{
+	list-style: none;
+	float: left;
+	padding-left: 0px;
+	padding-top: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.btnLojas
+{
+	width: 251px;
+	height:41px;
+	background:url(../imagens/footer_lojas.png);
+	display:block;
+}
+ 
+.lblAcompanhe
+{
+	display: block;
+	font-weight:bold;
+}
+
+.infoMobiLeft
+{
+	padding-top:7px;
+	color: #666;
+	font-size: 15px;
+	float:left;
+}
+
+#MobiClubInfo
+{
+	float:left;
+	margin-left:8px;
+}
+
+#MobiClubInfo ul li
+{
+	font-size: 20px;
+	color: #666;
+}
+
+#linkFooterContato
+{
+	color: #0194DA;	
+}
+
+#linkFooterContato:hover
+{
+	text-decoration:underline;
+}
+
+#copyrigth
+{
+	font-size:13px;
+}
+
+#InfoRedesSociais
+{
+	float:right;
+	margin-right:8px;
+}
+
+#linksPublicidade ul li
+{
+	float:left;
+	padding-left:10px;
+}
+
+#linksPublicidade
+{
+	margin-top: 10px;
+	display: inline-block;
+}
+
+
+ #conteudoPai
+{
+    display:table;
+    width:980px;
+    margin: 0px auto;
+    background-color:#fff;
+    -webkit-box-shadow: 2px 5px 8px #ccc, -4px 8px 10px #f7f7f7;
+	-moz-box-shadow: 2px 5px 8px #ccc, -4px 8px 10px #f7f7f7;
+	box-shadow: 2px 5px 8px #ccc, -4px 8px 10px #f7f7f7;
+	margin-top: -4px;
+ }
+#tudo
+{
+    width:100%;    
+}
+
+#linksPublicidade ul li a
+{
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+
+.redes_grande
+{
+	background-image:url(../imagens/redes_sociais.png);
+}
+
+#btnFb
+{
+	width:36px;
+	height:36px;
+	background-position: -149px 0px;
+}
+
+#btnFb:hover
+{
+	background-position: -149px -37px;
+}
+
+#btnTw
+{
+	width:35px;
+	height:36px;
+	background-position: -78px 0px;
+}
+
+#btnTw:hover
+{
+	background-position: -78px -37px;
+}
+
+ #btnG
+ {
+ 	width:36px;
+	height:36px;
+	background-position: -113px 0px;
+ }
+ 
+ #btnG:hover
+ {
+	background-position: -113px -37px;
+ }
+
+#btnRedesFacebook
+{
+	background-position: -20px 0px;
+}
+
+#btnRedesFacebook:hover
+{
+	background-position: -20px -20px;
+}
+
+#btnRedesTwitter
+{
+	background-position: -40px 0px;
+}
+
+#btnRedesTwitter:hover
+{
+	background-position: -40px -20px;
+}
+
+#btnRedesGPlus
+{
+	background-position: 0 0px;
+}
+
+#btnRedesGPlus:hover
+{
+	background-position: 0 -20px;
+}
+
+.btnRedes
+{
+	width:20px;
+	height:20px;
+	display:inline-block;
+	vertical-align: -5px;
+	margin-right: 5px;
+	background-image:url(../imagens/redes_sociais.png);
+}
+
+.lbl
+{
+    color: rgb(120,120,120);
+    font-size:14px;
+    font-weight:bold;    
+}
+
+.txt
+{
+    width: 248px;
+	height: 30px;
+    background-color: #F7F7F7;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding-left:5px;
+}
+
+#lbldisponivel
+{
+	color: #acacac;
+	width:84px;
+	width:84px;
+	height:20px;
+	padding-left:20px;
+	font-family: 'TheMix8-ExtraBoldRegular', 'IE TheMix8-ExtraBoldRegular';
+	font-size:22px;
+}
+
+.spans
+{
+	font-family:Ubuntu, Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+}
+
+#footer
+{
+	width: 100%;
+	margin-top: -12px;
+}
+#footer .border
+{
+	background-image: url(../imagens/footer-bg.png);
+	background-repeat: repeat-x;
+	height: 11px;
+}
+
+#footer .bgcolor
+{
+	background-color:#fff;
+	height: 140px;
+	padding-top: 10px;
+}
+
+#footer .shadow 
+{
+	background-image: url(../imagens/footershadow.jpg);
+	height:20px;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+#footerWrap
+{
+	width: 980px;
+	margin: 0 auto;
+	height: 80px;	
+}
+
+#termosInterno
+{
+	width:350px;
+	float:left;
+}
+
+#termosInterno ul li
+{
+	float:left;
+	padding: 0px 5px;
+}
+
+#termos
+{
+	width: 412px;
+	margin: 0 auto;
+	margin-bottom:20px;
+}
+
+#termos ul
+{
+	display:inline-block;
+	float:none;
+}
+
+#termos ul li
+{
+	float:left;
+	padding: 0px 5px;
+}
+
+#termos ul li a:hover
+{
+	text-decoration:underline;
+}
+#assinatura
+{
+	color: #707070;
+	font-size:13px;
+	float:right;
+	margin-top:-20px;
+}
+#assinaturaInterna
+{
+    color: #707070;
+    font-size:13px;
+    float:right;
+}
+.textAssinatura
+{
+	color: #005985;
+    font-size:13px;
+}
+
+h1
+{
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-top:30px;
+	padding-bottom:15px;
+	color:rgb(44, 167, 202);
+	font-size:35px;
+	line-height:35px;
+}
+
+h2
+{
+	color: #0194DA;
+	font-size: 28px;
+	margin: 0px;
+	padding: 13px 0px;
+}
+
+h3
+{
+	color: #FF6600;
+	font-size: 16px;
+	margin: 0px;
+	padding: 20px 0px 0px 45px;
+}
+
+h4
+{
+	color: #FF6600;
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+}
+
+h5
+{
+	color: #FF6600;
+	font-size: 24px;
+	margin: 0px;
+	padding: 15px 0px 10px 45px;
+}
+
+p
+{
+	margin: 0;
+	color: #8B8B8B;
+	font-family: Ubuntu, Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}

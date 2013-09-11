@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Class4ever</title>
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+        <link href="css/contato.css" rel="stylesheet" type="text/css" />
+    <link href="css/master.css" rel="stylesheet" type="text/css" />
+    <link href="css/logar.css" rel="stylesheet" type="text/css" />
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+
+    <script src="Scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+         <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        function initialize() {
+
+            var infoLats = "-8.055639"
+            var infoLongs = "-34.951717";
+            var latlng = new google.maps.LatLng(infoLats.replace(",", "."), infoLongs.replace(",", "."));
+
+            var myOptions = {
+                zoom: 15,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var mapa = new google.maps.Map(document.getElementById("mapa"), myOptions);
+            var b;
+        }
+        $(document).ready(function () {
+            initialize();
+        });
+        
+    </script>
+    <script type="text/javascript">
+        function scrollAjustes() {
+            var top = $(this).scrollTop();
+            var dist = 0 - top;
+
+            if (dist >= 0) {
+                $("#header").css("top", dist + "px");
+            } else {
+                $("#header").css("top", "-1px");
+            }
+        }
+
+        jQuery(document).ready(function () {
+            $(document).scroll(function () {
+                scrollAjustes();
+            });
+        });
+    </script>
+    <script type="text/javascript">// <![CDATA[
+
+        function scrollTo(anchorName) {
+            var scrollLength = 0;
+            if (anchorName == "comofunciona") {
+                scrollLength = 405;
+            } else if (anchorName == "contato") {
+                scrollLength = 900;
+            } else if (anchorName == "baixarapp") {
+                scrollLength = 900;
+            }
+
+            $('html,body').animate({
+                scrollTop: scrollLength
+            }, 1000, function () {
+                window.scroll(0, scrollLength);
+                $('html,body').stop();
+                scrollAjustes();
+            });
+        }
+    </script>
+        <script type="text/javascript">
+              function repositionMenuLojista() {
+                var width = $(window).width();
+                var left = 427;
+
+                if (width > 980) {
+                    var margin = (width - 970) / 2;
+                    left = left + margin;
+                }
+
+                // $("#menuLojista").css('left', left);
+            }
+
+            $(document).ready(function () {
+                $(document).keypress(function (e) {
+                    if (e.which == 13) {
+                        if ($('#janela1').css('display') == 'block') {
+                            $('#ctl00_ctl00_ContentPlaceHolder1_btnLogar').click();
+                        }
+                    }
+                });
+
+                $(document).scroll(function () {
+                    scrollMenuAjustes();
+                });
+
+                $(window).resize(function () {
+                    repositionMenuLojista();
+                });
+
+                if (location.hash.length > 0) {
+                    scrollTo(location.hash.substring(1));
+                }
+
+                repositionMenuLojista();
+
+                $("a[rel=modal]").click(function (ev) {
+                    ev.preventDefault();
+
+                    var id = $(this).attr("href");
+
+                    var alturaTela = $(document).height();
+                    var larguraTela = $(window).width();
+
+                    //colocando o fundo preto
+                    $('#mascara').css({ 'width': larguraTela, 'height': alturaTela });
+                    $('#mascara').fadeIn(1000);
+                    $('#mascara').fadeTo("slow", 0.8);
+
+                    var left = ($(window).width() / 2) - ($(id).width() / 2);
+                    var top = ($(window).height() / 2) - ($(id).height() / 2);
+
+                    $(id).css({ 'top': top, 'left': left });
+                    $(id).show();
+                });
+
+                $("#mascara").click(function () {
+                    $(this).hide();
+                    $(".window").hide();
+                });
+
+                $('.fechar').click(function (ev) {
+                    ev.preventDefault();
+                    $("#mascara").hide();
+                    $(".window").hide();
+                });
+
+                $('#btnSolicitar').click(function (ev) {
+                    scrollTo('solicitemobiclub');
+
+                    ev.preventDefault();
+                    $("#mascara").hide();
+                    $(".window").hide();
+
+                });
+            });
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div id="wrapper">
+            <h1 id="logoMobiClub">
+                <a class="logo-topo" href="index.html" title="Class4ever">
+                    Class4ever
+                </a>
+            </h1>
+            <nav>
+
+                       
+            <div id="headerCompanyWrap">
+                <ul>
+                    <li><a class="linkHeaderCompany" id="A1" href="#comofunciona" onclick="scrollTo('comofunciona')" runat="server">Como Funciona</a></li>
+                    <li><span class="linkHeaderCompany">|</span> </li>
+                    <li><a class="linkHeaderCompany" href="#contato" onclick="scrollTo('contato')" >Contato</a></li>
+                    <li><span class="linkHeaderCompany">|</span> </li>
+                    <li><a class="linkHeaderCompany" href="http://plus.google.com/hangouts/_?gid=952311796377&hso=0" target="_blank">Iniciar aula</a></li>
+                    <li><a id="btnRedesFacebook" class="btnRedes" target="_blank" href="#">
+                    </a><a id="btnRedesTwitter" class="btnRedes" target="_blank" href="#">
+                    </a><a id="btnRedesGPlus" class="btnRedes" target="_blank" href="#">
+                    </a></li>
+                </ul>
+            
+        </div>
+            </nav>
+        </div>
+    </header>
+    <div id="content">
+        <div id="tudo">
+            <div id="conteudoPai">
+                <script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+                <script type="text/javascript">
+                    $(window).load(function () {
+                        $('#slider').nivoSlider({
+                            effect: 'fade',
+                            pauseTime: 3000,
+                            beforeChange: function () {
+                                var index = $(".nivo-controlNav .active").attr('rel')
+
+                                if (index == '0') {
+                                    $("#linkSolicitarMobiClub").css("display", "block");
+                                    $("#linkBaixarOMobiClub").css("display", "none");
+
+                                    $("#cover_voce").css("backgroundColor", "#FFFFFF");
+                                    $("#cover_negocio").css("backgroundColor", "#f7f7f7");
+                                } else if (index == '1') {
+                                    $("#linkSolicitarMobiClub").css("display", "none");
+                                    $("#linkBaixarOMobiClub").css("display", "block");
+
+                                    $("#cover_voce").css("backgroundColor", "#F7F7F7");
+                                    $("#cover_negocio").css("backgroundColor", "#FFFFFF");
+                                }
+                            }
+                        });
+                    });
+	            </script>
+   
+    <!--<div id="linkSolicitarMobiClub">
+        <a href="lojista#solicitemobiclub">Solicite o MobiClub</a>
+    </div> -->
+   <!--
+    <div id="linkBaixarOMobiClub">
+        <a href="#baixarapp" onclick="scrollTo('baixarapp')">Faça o Download</a>
+    </div>
+    -->
+    <div class="slider-wrapper theme-default" style="width: 980px; height:400px; margin-top: -16px;">
+		<div class="ribbon"></div>
+		<div id="slider" class="nivoSlider">
+			<img src="imagens/cover1.jpg" alt="Integrado com o hungout" />
+            <img src="imagens/cover2.jpg" alt="Integrado com o redu" />
+            <img src="imagens/cover3.jpg" alt="Construindo um novo metodo de ensino" />
+		</div>
+	</div>
+    <div id="switcher-shadow"></div>
+
+    <div id="comoFunciona">
+        <h2>
+            Como Funciona?
+        </h2>
+        <p>
+           Crie vídeo aula online e disponibilize via youtube automaticamente, tornando seu conhecimento público e disponível para qualquer um que tenha vontade de aprender.
+        </p>
+        <div id="mais">
+            <div id="wrapperMais">
+
+            <img src="imagens/passos.png" alt="passo a passo" />
+                <div class="funciona">
+                   
+                    <div class="funcionaExplicacao">
+                        
+                        <div class="explicacaoText">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="funciona">
+                   
+                    <div class="funcionaExplicacao">
+                       
+                        <div class="explicacaoText">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="funciona">
+                   
+                    <div class="funcionaExplicacao">
+                        
+                        <div class="explicacaoText">
+                            <p>
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            </p>
+                        </div>
+                    </div>
+                </div>
+               <div class="funciona">
+                   
+                    <div class="funcionaExplicacao">
+                        
+                        <div class="explicacaoText">
+                            <p>
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div id="contato" style="width:930px; margin:0 auto;">
+        <div class="esquerda">
+            <h2>
+                Contato
+            </h2>
+            <p>
+                Entre em contato conosco para maiores informações
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="cellTitulo">
+                            <span class="lbl" ID="Label1">Nome</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="txt" ID="txtNome" runat="server"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cellTitulo">
+                            <span class="lbl">E-mail</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="txt" ID="Text1" runat="server"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cellTitulo">
+                            <span class="lbl" runat="server" text="Mensagem">Mensagem</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input  type="text" class="txtMSG" ID="txtMsg" textMode="MultiLine"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell">
+                            <input type="submit" class="btns2 botao2" ID="btnEnviar" runat="server">
+                            </input>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="direita">
+            <h2>
+                Localização</h2>
+                <div id="mapa">
+                </div>
+                <div id="endereco">
+                <div class="left">
+                    <span class="titulo">Unidade de Tecnologia</span><br />
+                    <span>Centro de Informática  (CIn) da UFPE</span><br />
+                    <span>Av. Jornalista Anibal Fernandes, s/n </span><br />
+                    <span>Cidade Universitária- Recife - PE</span><br />
+                </div>
+                <div class="right">
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="border">
+        </div>
+        <div class="bgcolor">
+            <div id="footerWrap">
+                <div id="MobiClubInfo" class="infoMobiLeft">
+                    <ul>
+                        <li><a class="linkHeaderCompany" href="#contato" onclick="scrollTo('contato')" >Contato</a></li>
+                        <li><span id="copyrigth">©2013 Class4ever</span> </li>
+                    </ul>
+                </div>
+                <div id="InfoRedesSociais" class="infoMobiLeft">
+                    <span class="lblAcompanhe">Acompanhe-nos</span>
+                    <div id="linksPublicidade">
+                        <ul>
+                            <li>
+                                <a target="_blank" id="btnFb" href="#" class="redes_grande"></a>
+                            </li>
+                            <li>
+                                <a target="_blank" id="btnTw" href="#" class="redes_grande"></a>
+                            </li>
+                            <li>
+                                <a target="_blank" id="btnG" href="#" class="redes_grande"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow"></div>
+            <div id="termos">
+                <ul>
+                    </li>
+                    <li><a class="textAssinatura" target="_blank" href="#">Termo de uso</a></li>
+                    <li class="textAssinatura">|</li>
+                    <li><a class="textAssinatura" target="_blank" href="#">Privacidade</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+        <div class="window" style="position:fixed" id="janela1">
+        <a href="#" class="fechar">x</a>
+
+        <div id="user">
+            <h4 style="color:#005986">LOGIN</h4>
+            <p style="margin-bottom: 10px;">
+                Efetue o login através da sua conta redu iniciar uma nova aula.
+            </p>
+
+            <div id="formLogin">                        
+                <div id="formItemEmailLogin" class="formItem">
+                    <div class="divFormLabel">
+                        <span class="lbl">Email</span>
+                    </div>
+                    <div class="divFormInput">
+                        <input type="text" class="txt" id="txtEmail" runat="server"></input>
+                    </div>
+                </div>
+                <div id="formItemSenhaLogin" class="formItem">
+                    <div class="divFormLabel">
+                        <span class="lbl">Senha</span>
+                    </div>
+                    <div class="divFormInput">
+                        <input type="text" class="txt" ID="TxtSenha" TextMode="Password" runat="server"></input>
+                    </div>
+                </div>
+
+                <div class="formItem" style="margin-top:20px;">
+                    <input type="submit" class="btns2 botao2" ID="btnLogar" Text="ENTRAR" runat="server"
+                    Style="width: 255px; font-size: 18px; padding-top: 5px; padding-bottom: 5px;"  ></input>
+                </div>
+
+            </div>  
+        </div>
+    </div>
+
+    <!-- mascara para cobrir o site -->  
+    <div id="mascara"></div>
+</body>
+</html>
+

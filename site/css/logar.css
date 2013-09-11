@@ -1,0 +1,86 @@
+﻿#menuLojista
+{
+	position: fixed;
+	width: 980px;
+	z-index: 999;
+	background-color: #f7f7f7;
+	top: 101px;
+	box-shadow: 1px 4px 4px -3px #ccc;
+	-moz-box-shadow: 1px 4px 4px -3px #ccc;
+	-webkit-box-shadow: 1px 4px 4px -3px #ccc;
+}
+
+#menuLojistaWrap
+{
+	float:right;
+	float: right;
+	font-size: 15px;
+}
+
+#menuLojistaWrap a {}
+
+#menuLojistaWrap a:hover
+{/*color:#2CA7CA;*/}
+
+.linkInternoMenu
+{
+	display:block;
+	float: left;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+	padding-top: 12px;
+	color:#005985;	
+	border-right:1px solid #cdcdcd;
+}
+
+.linkInternoMenu:hover
+{
+	background-color:white;
+	cursor:pointer;
+	border-bottom: 3px solid #005985;
+	padding-bottom: 9px;
+}
+
+
+#divLinkEsqueceuSenha
+{
+	text-align: center;
+	margin-top: 6px;
+}
+
+/*Janela Modal - Inicio*/
+.window
+{
+    display:none;
+    width:260px;
+    position:absolute;
+    left:0;
+    top:0;
+    background:#FFF;
+    z-index:9900;
+    padding:20px;
+    border-radius:10px;
+}
+ 
+#mascara
+{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+}
+ 
+.fechar
+{
+	display:block;
+	text-align:right;
+	color: #005986;
+	font-weight:bold;
+	float:right;
+	font-size: 18px;
+	margin-top: -10px;
+}
+/*Janela Modal - Fim*/

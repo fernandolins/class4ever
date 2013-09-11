@@ -1,0 +1,154 @@
+﻿#tudo
+{
+    width:100%;    
+}
+
+#mapa
+{
+	margin-top: 5px;
+	height:330px;
+	padding: 5px;
+	background-color: white;
+	padding: 5px;
+	border-style: none;
+	border: 1px solid #CDCDCD;
+}
+
+#endereco
+{
+	display:inline-block;
+	width: 472px;
+	margin-top:20px;
+	color: #8B8B8B;    
+    font-size:14px;
+	font-family: Ubuntu, Helvetica, Arial, Verdana, sans-serif;
+
+}
+
+#endereco .titulo
+{
+	font-weight:bold;
+    font-size:14px;
+    font-family:  Helvetica, Arial, Verdana, sans-serif;
+}
+.left
+{
+float: left;
+margin-bottom:20px;
+
+}
+
+.right
+{
+float: right;
+
+}
+
+#conteudo
+{
+width: 960px;
+padding-left: 20px;
+padding-right: 20px;
+margin-bottom: 40px;
+display: inline-block;
+padding-top: 20px;
+}
+table
+{
+    float:left;    
+}
+
+.lbl
+{
+	color: rgb(120,120,120);
+	font-size:14px;
+	font-weight:bold;  
+}
+.txt
+{
+   width:350px;    
+    height: 33px;
+    background-color: #F7F7F7;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;  
+    padding-left:5px;
+}
+.txt1
+{
+   width:248px;    
+    height: 33px;
+    background-color: #F7F7F7;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;  
+    padding-left:5px;
+}
+.txtMSG
+{
+    width: 425px;
+    height:163px;
+    background-color: #F7F7F7;
+    font-size: 14px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;  
+    padding-left:5px;
+	font-family: Verdana,Geneva,Kalimati,sans-serif;
+}
+.cell
+{
+    text-align:right;     
+}
+.btns
+{
+    background-color:#EB6725;
+    color:#fff;
+    font-size:15px;
+    border-style:none;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    cursor:pointer;
+    width:75px;
+    height:30px;
+}
+
+.btns:hover
+{
+    background-color:#035880;
+}
+
+.cellTitulo
+{
+	padding-top:10px;
+}
+
+.esquerda
+{
+    float:left;
+}
+
+.direita
+{
+	float:right;
+}
+.sucesso
+{
+	color:Green;
+	font-size: 14px;
+	font-weight:bold;
+	margin-right:20px;   
+}
+  
+.insucesso
+{
+	color: #CE0000;
+	font-size: 14px;
+	font-weight:bold;
+	margin-right:20px;
+}
