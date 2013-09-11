@@ -1,0 +1,29 @@
+<script src="//hangoutsapi.talkgadget.google.com/talkgadget/apps/gadgets/js/rpc.js"></script>
+<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+
+<script>
+var TOPIC = "NONE"
+var youTubeLiveId = "NONE"
+
+function startApp() {
+	TOPIC = gapi.hangout.getTopic();
+	youTubeLiveId = gapi.hangout.onair.getYouTubeLiveId();
+}
+
+function init() {
+  gapi.hangout.onApiReady.add(
+      function(eventObj) {
+        startApp();
+      });
+}
+
+// Add API listener immediately.  If you need an
+// OAuth 2.0 access token, your startup will need to
+// be different.
+init();
+</script>
+
+<frameset cols="*">
+<frame name="principal" src="http://goo.gl/UJUE3t">
+</frameset>
+
