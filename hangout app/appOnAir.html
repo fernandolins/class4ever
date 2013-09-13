@@ -39,8 +39,12 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }*/
 
 <!-- <body style="padding: 10px"> -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<h3>Settings</h3>
-
+	<div style="width:350px;">
+<h3 style="color: rgb(1, 148, 218);
+font-size: 28px;
+width:200px;
+margin: 0 auto;">Settings</h3>
+</div>
 <!-- <p> -->
   <!-- Is On Air: 
   <b><span id='isOnAir'>undefined</span></b><br/> -->
@@ -79,30 +83,76 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }*/
 <!-- <p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a>
 to learn more about developing Hangouts!</a></p> -->
 <from id="form">
-  <label>Nome do Ambiente:</label><br/>
-  <select id="ambiente" name="ambiente" onchange="getCurso(this.value)">
+  <div style="margin: 10px 0px;"><label>Nome do Ambiente:</label></div>
+  <select id="ambiente" style="  width:250px;    
+    height: 33px;
+    background-color: #F7F7F7;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;  
+    padding-left:5px; name="ambiente" onchange="getCurso(this.value)">
     <option value="">-- Escolha o Ambiente --</option>
   </select>
   </br>
-  <label>Nome do Curso:</label><br/>
-  <select id="curso" name="curso" disabled="disabled" onchange="getDisciplina(this.value)">
+  <div style="margin: 10px 0px;"><label>Nome do Curso:</label><br/></div>
+  <select id="curso" name="curso" style="  width:250px;    
+    height: 33px;
+    background-color: #F7F7F7;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;  
+    padding-left:5px;" disabled="disabled" onchange="getDisciplina(this.value)">
     <option value="">-- Escolha o Curso --</option>
   </select>
   </br>
-  <label>Nome do Disciplina:</label><br/>
-  <select id="disciplina" name="disciplina" disabled="disabled" onchange="getModulo(this.value)">
+  <div style="margin: 10px 0px;"><label>Nome do Disciplina:</label></div>
+  <select id="disciplina" style="  width:250px;    
+    height: 33px;
+    background-color: #F7F7F7;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;  
+    padding-left:5px;" name="disciplina" disabled="disabled" onchange="getModulo(this.value)">
     <option value="">-- Escolha o Disciplina --</option>
   </select>
   </br>
-  <label>Nome do Modulo:</label><br/>
-  <select id="modulo" name="modulo" disabled="disabled" onchange="setAula(this.value)">
+  <div style="margin: 10px 0px;"><label>Nome do Modulo:</label></div>
+  <select id="modulo" style="  width:250px;    
+    height: 33px;
+    background-color: #F7F7F7;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;  
+    padding-left:5px;" name="modulo" disabled="disabled" onchange="setAula(this.value)">
     <option value="">-- Escolha o Modulo --</option>
   </select>
   </br>
-  <label>Nome da Aula:</label>
-  <input id="topic" type="text" readonly>
-  </br>
-  <button id="redu" disabled="disabled" onclick="gerar()">Gerar Aula</button>
+  <div style="margin: 15px 0px;"><label>Nome da Aula:</label>
+  <input style="   width:150px;    
+    height: 33px;
+    background-color: #F7F7F7;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;  
+    padding-left:5px;" id="topic" type="text" readonly>
+  </div>
+  <div style="display:inline-block; width:250px;"><div style="float:right;"><button id="redu" style="color: rgb(255, 255, 255);
+font-size: 15px;
+padding:5px;
+background-color: rgb(3, 154, 204);
+border-style: none;
+border-radius: 5px 5px 5px 5px;
+cursor: pointer;"  onclick="gerar()">Gerar Aula</button></div></div>
 </from>
 
 <script language="JavaScript" type="text/javascript" >
