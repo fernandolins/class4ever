@@ -2,9 +2,16 @@
 {
 	margin: 0;
 	color: #8B8B8B;
-	font-family: Ubuntu, Helvetica, Arial, Verdana, sans-serif;
-	font-size: 14px;
-	line-height: 20px;
+	font-family: robotothin, Helvetica, Arial, Verdana, sans-serif;
+	font-size: 15px;
+}
+
+input[type="submit"] {
+	font-family: robotothin;
+}
+
+input[type="text"]:focus {
+	outline: 0;
 }
 
 .imgMais:hover
@@ -143,6 +150,7 @@
 #comoFunciona
 {
 	padding:20px;
+	color: #44AA39;
 }
 
 #mais
@@ -182,6 +190,12 @@ margin-left: 15px;
 	width: 285px;
 	border: 1px solid #CDCDCD;
 	margin-bottom: 5px;
+}
+
+#comoFunciona p {
+	line-height: 28px;
+	text-align: center;
+	font-size: 19px;
 }
 
 .explicacaoImg

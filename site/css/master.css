@@ -10,59 +10,16 @@ body
 	font-family: Helvetica, Arial, Verdana, sans-serif;
 }
 
-/****** Ubuntu FONT **********************/
-
 @font-face {
-	font-family: 'Ubuntu';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Ubuntu'), url('../Fontes/ubuntu.woff') format('woff');
-}
-
-/***** FIM UMBUTO FONT ***************/
-
-
-@font-face {
-    font-family: 'IE Arista';     
-    src: url('../Fontes/Arista.eot') format('embedded-opentype');
+    font-family: 'robotothin';
+    src: url('../roboto-thin-webfont.eot');
+    src: url('../roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../roboto-thin-webfont.woff') format('woff'),
+         url('../roboto-thin-webfont.ttf') format('truetype'),
+         url('../roboto-thin-webfont.svg#robotothin') format('svg');
     font-weight: normal;
     font-style: normal;
-}
 
-@font-face {
-    font-family: 'IE TheMix8-ExtraBoldRegular';
-    src: url('../Fontes/themix-8-xbold-webfont.eot') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'IE TheMix9-BlackRegular';    
-    src: url('../Fontes/themix-9-black-webfont.eot') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Arista';     
-    src: url('../Fontes/Arista.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TheMix8-ExtraBoldRegular';
-    src: url('../Fontes/themix-8-xbold-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TheMix9-BlackRegular';
-    src: url('../Fontes/themix-9-black-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-   
 }
 
 .cell
@@ -206,37 +163,47 @@ body
 {
 	display:inline-block;
 	width:100%;
-	padding: 7px 0px;
 }
 
 #headerCompanyWrap ul
 {
 	float:right;
-	font-size: 13px;
+	padding-right: 15px;
 }
 
 #headerCompanyWrap ul li
 {
 	text-decoration: none;
 	display: inline;
-	padding-left: 8px;
-}
-
-#headerCompanyWrap ul li span
-{
-	color:#005985;
-	font-weight:bold;
+	padding-left: 25px;
 }
 
 .linkHeaderCompany
 {
+	font-family: robotothin;
+	font-size: 20px;
 	text-decoration: none;
-	color:#005985;
+	color: #777;
+}
+
+.linkHeaderCompany.hangout
+{
+	background-color: #777;
+	color: white;
+	padding: 8px 12px;
+	border-radius: 6px;
+	font-size: 17px;
+}
+
+.linkHeaderCompany.hangout:hover
+{
+	background-color: #666;
+	color: white;
 }
 
 .linkHeaderCompany:hover
 {
-	text-decoration: underline;
+	color: #397EFF;
 }
 
 nav
@@ -312,7 +279,9 @@ ul
 .lblAcompanhe
 {
 	display: block;
-	font-weight:bold;
+	font-family: robotothin;
+	float: right;
+	padding-bottom: 10px;
 }
 
 .infoMobiLeft
@@ -331,8 +300,8 @@ ul
 
 #MobiClubInfo ul li
 {
-	font-size: 20px;
-	color: #666;
+	font-family: robotothin;
+	color: #555;
 }
 
 #linkFooterContato
@@ -347,7 +316,7 @@ ul
 
 #copyrigth
 {
-	font-size:13px;
+	font-size:17px;
 }
 
 #InfoRedesSociais
@@ -364,8 +333,8 @@ ul
 
 #linksPublicidade
 {
-	margin-top: 10px;
-	display: inline-block;
+	padding-top: 10px;
+	display: block;
 }
 
 
@@ -523,7 +492,7 @@ ul
 #footer .bgcolor
 {
 	background-color:#fff;
-	height: 140px;
+	height: 90px;
 	padding-top: 10px;
 }
 
@@ -609,7 +578,8 @@ h1
 
 h2
 {
-	color: #0194DA;
+	font-family: robotothin;
+	color: #397EFF;
 	font-size: 28px;
 	margin: 0px;
 	padding: 13px 0px;
