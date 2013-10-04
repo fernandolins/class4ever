@@ -152,15 +152,16 @@ padding:5px;
 background-color: rgb(3, 154, 204);
 border-style: none;
 border-radius: 5px 5px 5px 5px;
-cursor: pointer;"  onclick="gerar()">Gerar Aula</button></div></div>
+cursor: pointer;" disabled="disabled" onclick="gerar()">Gerar Aula</button></div></div>
 </from>
+
 
 <script language="JavaScript" type="text/javascript" >
     var modulo_id = "NONE";
     console.log(parent.youTubeLiveId);
     function gerar(){
 
-      var url_aula = 'http://www.redu.com.br/api/subjects/' + modulo_id + '/lectures?access_token=phUxtjKP5BybJgUmZvmoAFFQRL7rsIFcIahT4fwy';
+      var url_aula = 'http://www.redu.com.br/api/subjects/' + modulo_id + '/lectures?access_token=' + token;
       var name = document.getElementById('topic').value;
       // var youTubeLiveId = gapi.hangout.onair.getYouTubeLiveId();
       var url_youtube = "http://www.youtube.com/watch?v=" + parent.youTubeLiveId;
@@ -185,7 +186,7 @@ cursor: pointer;"  onclick="gerar()">Gerar Aula</button></div></div>
     }
 
     function getModulo(disc_id){
-      var url_mod = 'http://www.redu.com.br/api/spaces/' + disc_id + '/subjects?access_token=phUxtjKP5BybJgUmZvmoAFFQRL7rsIFcIahT4fwy';
+      var url_mod = 'http://www.redu.com.br/api/spaces/' + disc_id + '/subjects?access_token=' + token;
 
       req = $.ajax({
           url:url_mod,
@@ -207,7 +208,7 @@ cursor: pointer;"  onclick="gerar()">Gerar Aula</button></div></div>
     }
 
     function getDisciplina(curso_id){
-      var url_disc = 'http://www.redu.com.br/api/courses/' + curso_id + '/spaces?access_token=phUxtjKP5BybJgUmZvmoAFFQRL7rsIFcIahT4fwy';
+      var url_disc = 'http://www.redu.com.br/api/courses/' + curso_id + '/spaces?access_token=' + token;
 
       req = $.ajax({
             url:url_disc,
@@ -229,7 +230,7 @@ cursor: pointer;"  onclick="gerar()">Gerar Aula</button></div></div>
     }
 
     function getCurso(env_id){
-      var url_cursos = 'http://www.redu.com.br/api/environments/'+ env_id + '/courses?access_token=phUxtjKP5BybJgUmZvmoAFFQRL7rsIFcIahT4fwy';
+      var url_cursos = 'http://www.redu.com.br/api/environments/'+ env_id + '/courses?access_token='+ token;
       
       req = $.ajax({
             url:url_cursos,
@@ -267,7 +268,7 @@ cursor: pointer;"  onclick="gerar()">Gerar Aula</button></div></div>
         type:"GET",
         async:false,
     });
-
+    var token = qs["access_token"];
     req.done(function(response, textStatus, jqXHR){
         var env = document.getElementById('ambiente');
         for (var i = 0; i < response.length; i++)
